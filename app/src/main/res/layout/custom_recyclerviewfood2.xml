@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.example.foodapp2.model.FoodOder" />
+
+        <variable
+            name="foodOrder"
+            type="FoodOder" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardBackgroundColor="#F8B45D"
+            card_view:cardCornerRadius="7dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry">
+
+                <ImageView
+                    android:id="@+id/frag2Img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:image="@{foodOrder.picture}" />
+
+                <TextView
+                    android:id="@+id/frag2TxtName"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/frag2Img"
+                    android:text="@{foodOrder.name}"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/frag2TxtDescribe"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/frag2TxtName"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/frag2Img"
+                    android:text="@{foodOrder.describe}"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/frag2TxtPrice"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/frag2TxtDescribe"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/frag2Img"
+                    android:text="@{Double.toString(foodOrder.price)}"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/frag2ImgDelete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/delete" />
+
+                <TextView
+                    android:id="@+id/frag2TxtCount"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/frag2ImgDelete"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="@{Integer.toString(foodOrder.count)}"
+                    android:textColor="#ff00"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

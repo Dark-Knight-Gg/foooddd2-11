@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".admin.AdminAddActivity">
+
+        <TextView
+            android:id="@+id/addTxtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/th_m_m_n"
+            android:textColor="#ff00"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/addEdtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/nh_p_t_n_m_n_n"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addTxtTitle" />
+
+        <EditText
+            android:id="@+id/addEdtDescribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/nh_p_m_t"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addEdtName" />
+
+        <EditText
+            android:id="@+id/addEdtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/nh_p_gi"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addEdtDescribe" />
+
+        <ImageView
+            android:id="@+id/addImg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addEdtPrice" />
+
+        <ImageView
+            android:id="@+id/addImgCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/camera"
+            app:layout_constraintLeft_toRightOf="@id/addImg"
+            app:layout_constraintTop_toBottomOf="@id/addEdtPrice" />
+
+        <ImageView
+            android:id="@+id/addImgFoder"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/folder"
+            app:layout_constraintLeft_toRightOf="@id/addImg"
+            app:layout_constraintTop_toBottomOf="@id/addImgCamera" />
+
+        <Button
+            android:id="@+id/addBtnAdd"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_th_m"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addImg" />
+
+        <Button
+            android:id="@+id/addBtnCancle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/h_y"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/addBtnAdd"
+            app:layout_constraintTop_toBottomOf="@id/addImg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

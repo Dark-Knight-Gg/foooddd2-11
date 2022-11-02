@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.foodapp2.model.Food" />
+
+        <variable
+            name="food"
+            type="Food" />
+
+        <variable
+            name="onButtonClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardBackgroundColor="#DFCDB6"
+            card_view:cardCornerRadius="7dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry">
+
+                <ImageView
+                    android:id="@+id/customImg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:image="@{food.picture}" />
+
+                <TextView
+                    android:id="@+id/customTxtName"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/customImg"
+                    android:text="@{food.name}"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/customTxtDescribe"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/customTxtName"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/customImg"
+                    android:text="@{food.describe}"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/customTxtPrice"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/customTxtName"
+                    android:text="@{Double.toString(food.price)}"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/customEdtCount"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/customTxtPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:text="@string/_1"
+                    android:textColor="#ff00"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/customBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/customImg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#457FE3"
+                    android:text="@string/oder"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

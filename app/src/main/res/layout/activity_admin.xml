@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.example.foodapp2.admin.AdminViewModel" />
+
+        <variable
+            name="adminViewModel"
+            type="AdminViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".admin.AdminActivity">
+
+        <ImageView
+            android:id="@+id/adminIgBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:onClick="@{()-> adminViewModel.onClickBack()}"
+            android:src="@drawable/previous"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/adminBtnAdd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:onClick="@{()-> adminViewModel.onClickAdd()}"
+            android:text="@string/th_m"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/adminRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adminBtnAdd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

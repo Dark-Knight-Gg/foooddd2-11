@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.example.foodapp2.model.User" />
+        <import type="com.example.foodapp2.login.LoginViewModel"/>
+        <variable
+            name="user"
+            type="User" />
+        <variable
+            name="loginViewModel"
+            type="com.example.foodapp2.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5DC8E8"
+        android:padding="5dp"
+        tools:context=".login.LoginActivity">
+
+        <TextView
+            android:id="@+id/loginTxtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="@string/ng_nh_p_h_th_ng"
+            android:textColor="#ff00"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:text="@={loginViewModel.username}"
+            android:id="@+id/loginEdtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/nh_p_t_n_ng_nh_p"
+            android:importantForAutofill="no"
+            android:textColor="#FFFCFC"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginTxtTitle" />
+
+        <EditText
+            android:text="@={loginViewModel.password}"
+            android:id="@+id/loginEdtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/nh_p_m_t_kh_u"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="#FFFCFC"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginEdtUsername" />
+
+        <CheckBox
+            android:checked="@={loginViewModel.checked}"
+            android:id="@+id/loginCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/l_u_ng_nh_p"
+            android:textColor="#FFFDFD"
+            android:textColorHighlight="#ff00 "
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginEdtPassword" />
+
+        <Button
+            android:id="@+id/loginBtnLogin"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/ng_nh_p"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:onClick="@{()-> loginViewModel.onClickLogin()}"
+            app:layout_constraintRight_toLeftOf="@id/loginBtnRegister"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginCheckbox" />
+
+        <Button
+            android:onClick="@{() -> loginViewModel.onClickRegister()}"
+            android:id="@+id/loginBtnRegister"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ng_k"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/loginBtnLogin"
+            app:layout_constraintTop_toBottomOf="@id/loginCheckbox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

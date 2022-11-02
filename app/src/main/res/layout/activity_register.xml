@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.example.foodapp2.register.RegisterViewModel"/>
+        <variable
+            name="registerViewModel"
+            type="com.example.foodapp2.register.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#46C2F3"
+        android:padding="5dp"
+        tools:context=".register.RegisterActivity">
+
+        <ImageView
+            android:onClick="@{()-> registerViewModel.onClickBack()}"
+            android:id="@+id/registerImgBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/previous"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/registerTxtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:text="@string/ng_k_t_i_kho_n"
+            android:textColor="#9306AC"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:text="@={registerViewModel.username}"
+            android:id="@+id/registerEdtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/nh_p_t_n_t_i_kho_n"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="#FAF9F9"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerTxtTitle" />
+
+        <EditText
+            android:text="@={registerViewModel.password}"
+            android:id="@+id/registerEdtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/nh_p_m_t_kh_u_k1"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="#FDFBFB"
+            android:textColorHint="#FDFDFD"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/registerEdtUsername" />
+
+        <EditText
+            android:text="@={registerViewModel.repeatPassword}"
+            android:id="@+id/registerEdtRepeatPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/nh_p_l_i_m_t_kh_u"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="#FAF9F9"
+            android:textColorHint="#F8F4F4"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/registerEdtPassword" />
+
+        <Button
+            android:onClick="@{()-> registerViewModel.onClickRegister()}"
+            android:id="@+id/registerBtnRegister"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/da_ng_k"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerEdtRepeatPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

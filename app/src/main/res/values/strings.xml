@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FoodApp2</string>
+    <string name="th_m">Thêm</string>
+    <string name="th_m_m_n">Thêm món</string>
+    <string name="nh_p_t_n_m_n_n">Nhập tên món ăn...</string>
+    <string name="nh_p_m_t">Nhập mô tả...</string>
+    <string name="nh_p_gi">Nhập giá...</string>
+    <string name="btn_th_m">Thêm</string>
+    <string name="ng_nh_p_h_th_ng">Đăng nhập hệ thống</string>
+    <string name="nh_p_t_n_ng_nh_p">Nhập tên đăng nhập...</string>
+    <string name="nh_p_m_t_kh_u">Nhập mật khẩu...</string>
+    <string name="l_u_ng_nh_p">Lưu đăng nhập</string>
+    <string name="ng_nh_p">Đăng nhập</string>
+    <string name="ng_k">Đăng ký</string>
+    <string name="h_y">Hủy</string>
+    <string name="ng_k_t_i_kho_n">Đăng ký tài khoản</string>
+    <string name="nh_p_t_n_t_i_kho_n">Nhập tên tài khoản...</string>
+    <string name="nh_p_m_t_kh_u_k1">Nhập mật khẩu...</string>
+    <string name="nh_p_l_i_m_t_kh_u">Nhập lại mật khẩu...</string>
+    <string name="da_ng_k">Đăng ký</string>
+    <string name="x">x</string>
+    <string name="t_ng">Tổng :</string>
+    <string name="_1">1</string>
+    <string name="oder">Oder</string>
+    <string name="b_n_c_ch_c_ch_n_mu_n_x_a_m_n_n_n_y_kh_ng">Bạn có chăc chắn muốn xóa món ăn này không?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="b_n_c">Bạn có chăc chắn muốn xóa món ăn này không?</string>
+    <string name="yes1">Yes</string>
+    <string name="n_o">No</string>
+    <string name="h_a_n">Hóa Đơn</string>
+    <string name="s_ti_n_c_a_n_n_y_l">Số tiền của đơn này là:</string>
+    <string name="vnd">VND</string>
+    <string name="ok">Ok</string>
+    <string name="menu">Menu</string>
+    <string name="m_n_c_a_b_n">Món của bạn</string>
+</resources>
